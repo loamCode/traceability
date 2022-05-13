@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
-# a script to create Global Location Numbers using
+# code to create Global Location Numbers including check digit using
 # a GS1 Company Prefix and internal identifier
 # GLNs are 13-digit location identifiers used with GS1 Standards
 
-def GLNMaker(prefix, ID):
-    if len(str(prefix)) + len(str(ID)) == 12:
-        GLN = str(prefix) + str(ID)
+def GLNMaker(prefix, internalID):
+    if len(str(prefix)) + len(str(internalID)) == 12:
+        GLN = str(prefix) + str(internalID)
         checksum = 0
         index = 1
         for i in GLN:
