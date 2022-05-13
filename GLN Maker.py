@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[2]:
-
+# a script to create Global Location Numbers using
+# a GS1 Company Prefix and internal identifier
+# GLNs are 13-digit location identifiers used with GS1 Standards
 
 def GLNMaker(prefix, ID):
     if len(str(prefix)) + len(str(ID)) == 12:
@@ -24,17 +24,13 @@ def GLNMaker(prefix, ID):
         pass
 
 
-# In[4]:
 
 
 #example
-restaurants = [1414,3576,3922,4139,3760,4100,4232,4163,4326,4281,4045]
+locations = [1414,3576,3922,4139,3760,4100,4232,4163,4326,4281,4045]
 for i in range(len(restaurants)):
-    print(GLNMaker("08406621", restaurants[i]))
+    print(GLNMaker("01234568", restaurants[i]))
     
-
-
-# In[ ]:
 
 
 
